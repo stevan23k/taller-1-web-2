@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { equipos, jugadores } from './db';
-import { Equipo, Jugador } from './mundial.model';
 
 @Injectable()
 export class MundialService {

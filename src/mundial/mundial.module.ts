@@ -4,6 +4,6 @@ import { MundialService } from './mundial.service';
 
 @Module({
   controllers: [MundialController],
-  providers: [MundialService]
+  providers: [MundialService],
 })
 export class MundialModule {}
