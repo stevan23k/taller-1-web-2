@@ -15,4 +15,14 @@ export class MundialController {
     const idNumber = Number(id);
     return this.service.getEquipoId(idNumber);
   }
+
+  @Get('jugadores')
+  getJugadores() {
+    return this.service.getJugadores();
+  }
+
+  @Get('jugadores/:id')
+  getJugador(@Param('id') id: number) {
+    return this.service.getJugadoresId(Number(id));
+  }
 }

@@ -27,4 +27,24 @@ export class MundialService {
 
     return { ...equipo, jugadores: jugadoresEquipo };
   }
+
+  getJugadores() {
+    return jugadores.map((jugador) => {
+      const equipo = equipos.find((e) => e.id === jugador.equipo);
+
+      return { ...jugador, equipo };
+    });
+  }
+
+  getJugadoresId(id: number) {
+    const jugador = jugadores.find((j) => j.id === id);
+
+    if (!jugador) {
+      return `No existe un jugador con id ${id}`;
+    }
+
+    const equipo = equipos.find((e) => e.id === jugador.equipo);
+
+    return { ...jugador, equipo };
+  }
 }
